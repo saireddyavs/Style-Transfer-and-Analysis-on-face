@@ -1,0 +1,56 @@
+{% if filename %}
+<div>
+    <img src="{{ filename }}"  width="200" height="200" >
+</div>
+{% endif %}
+
+{% if age %}
+<div>
+    <p>
+        {{age}}
+    </p>
+</div>
+{% endif %}
+
+{% if dominant_emotion %}
+<div>
+    <p>
+        {{dominant_emotion}}
+    </p>
+</div>
+{% endif %}
+
+{% if dominant_race %}
+<div>
+    <p>
+        {{dominant_race}}
+    </p>
+</div>
+{% endif %}
+
+{% if gender %}
+<div>
+    <p>
+        {{gender}}
+    </p>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+
+<button onclick="window.location.href='http://localhost:5000/';">
+    Go Back
+</button>
+
+{% if filename %}
+
+<button onclick="window.location.href='http://localhost:5000/post_to_twitter/{{filename}}';">
+    Post To Twitter
+</button>
+
+{% endif %}
