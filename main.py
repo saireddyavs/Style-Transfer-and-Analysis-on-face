@@ -173,6 +173,8 @@ def style_image():
             except Exception as e:
                 print("In except ")
                 print(e)
+                return render_template('show_image.html', message="Can not find the face correctly in the image or else there is no face in the image" ,filename=os.path.join(app.config['UPLOAD_FOLDER'],  filename))
+
 
 
         return render_template('show_image.html', filename=os.path.join(app.config['UPLOAD_FOLDER'], filename))
@@ -192,6 +194,6 @@ def display_image(filename):
 
 
 if __name__ == "__main__":
-    # app.run(debug=True,use_reloader=False)
+    app.run(debug=True,use_reloader=False)
 
-    app.run(debug=True)
+    # app.run(debug=True)
